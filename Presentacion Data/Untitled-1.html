@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Analysis Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #00343c;
+  color: #e6f2e6;
+}
+header {
+  background: #001e22;
+  padding: 32px 0 24px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #b6e23a;
+  letter-spacing: 2px;
+}
+header p {
+  margin: 8px 0 0 0;
+  font-size: 1.2em;
+  color: #b6e23a;
+  opacity: 0.8;
+}
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.card {
+  background: #01444e;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 32px 28px;
+  min-width: 280px;
+  max-width: 340px;
+  flex: 1 1 300px;
+  color: #e6f2e6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.5em;
+  color: #b6e23a;
+}
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.footer {
+  text-align: center;
+  color: #b6e23a;
+  padding: 18px 0 10px 0;
+  font-size: 1em;
+  opacity: 0.7;
+}
+.btn {
+  display: inline-block;
+  background: #b6e23a;
+  color: #00343c;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #d0ff5a;
+}
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Analysis Dashboard</h1>
+    <p>Focused on infrastructure and digital consulting</p>
+  </header>
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h2>Automation of Verification Processes</h2>
+        <ul>
+          <li>Quality control of models</li>
+          <li>Coordination tracking</li>
+          <li>Validation of standards and regulations</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Data Management and Visualization</h2>
+        <ul>
+          <li>Interactive dashboards</li>
+          <li>Team management and administration</li>
+          <li>Visualization of project KPIs in real time</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Operational Efficiency Analysis</h2>
+        <ul>
+          <li>Productivity analysis by teams and areas</li>
+          <li>Data-based optimization of workflows</li>
+          <li>Resource performance evaluation</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="Images/image.html" class="btn">Ver Imagen de Ejemplo</a>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 digitalAECOM - Data Connection
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
