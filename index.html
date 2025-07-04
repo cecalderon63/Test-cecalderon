@@ -5,100 +5,189 @@
   <title>Data Analysis Dashboard</title>
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Data Analysis Dashboard</h1>
-    <p>Focused on infrastructure and digital consulting</p>
-  </header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#quienes" class="active">Quiénes somos</a></li>
-      <li><a href="#introduccion">Introducción</a></li>
-      <li><a href="#metodologia">Metodología</a></li>
-      <li><a href="#desarrollos">Desarrollos</a></li>
-      <li><a href="#casos">Casos de estudio</a></li>
-      <li><a href="#servicios">Nuestros servicios</a></li>
-    </ul>
-  </nav>
-
-  <div class="section" id="quienes">
-    <h2>Quiénes somos</h2>
-    <ul class="subtopics">
-      <li>Subtema 1: Historia y misión</li>
-      <li>Subtema 2: Equipo y valores</li>
-      <li>Subtema 3: Alcance global</li>
-    </ul>
-  </div>
-
-  <div class="section" id="introduccion">
-    <h2>Introducción</h2>
-    <ul class="subtopics">
-      <li>Subtema 1: Contexto del sector</li>
-      <li>Subtema 2: Retos actuales</li>
-      <li>Subtema 3: Oportunidades de mejora</li>
-    </ul>
-  </div>
-
-  <div class="section" id="metodologia">
-    <h2>Metodología</h2>
-    <ul class="subtopics">
-      <li>Subtema 1: Flujo de trabajo</li>
-      <li>Subtema 2: Herramientas utilizadas</li>
-      <li>Subtema 3: Mejores prácticas</li>
-    </ul>
-  </div>
-
-  <div class="section" id="desarrollos">
-    <h2>Desarrollos</h2>
-    <ul class="subtopics">
-      <li>Subtema 1: Proyectos recientes</li>
-      <li>Subtema 2: Innovaciones tecnológicas</li>
-      <li>Subtema 3: Resultados obtenidos</li>
-    </ul>
-  </div>
-
-  <div class="section" id="casos">
-    <h2>Casos de estudio</h2>
-    <ul class="subtopics">
-      <li>Subtema 1: Caso de éxito 1</li>
-      <li>Subtema 2: Caso de éxito 2</li>
-      <li>Subtema 3: Caso de éxito 3</li>
-    </ul>
-  </div>
-
-  <div class="section" id="servicios">
-    <h2>Nuestros servicios</h2>
-    <div class="cards">
-      <a href="Images/flujo.html" class="card">
-        <h3>Automation of Verification Processes</h3>
-        <ul>
-          <li>Quality control of models</li>
-          <li>Coordination tracking</li>
-          <li>Validation of standards and regulations</li>
-        </ul>
-      </a>
-      <a href="Images/metodologia.html" class="card">
-        <h3>Data Management and Visualization</h3>
-        <ul>
-          <li>Interactive dashboards</li>
-          <li>Team management and administration</li>
-          <li>Visualization of project KPIs in real time</li>
-        </ul>
-      </a>
-      <a href="Images/desarrollos.html" class="card">
-        <h3>Operational Efficiency Analysis</h3>
-        <ul>
-          <li>Productivity analysis by teams and areas</li>
-          <li>Data-based optimization of workflows</li>
-          <li>Resource performance evaluation</li>
-        </ul>
-      </a>
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-active">
+    <div class="splash-content">
+      <h1>AECOM</h1>
+      <p>Engineering Excellence through Digital Innovation</p>
+      <button id="start-btn" class="main-btn">Start Presentation &rarr;</button>
     </div>
   </div>
 
-  <div class="footer">
-    &copy; 2025 digitalAECOM - Data Connection
+  <!-- Main Dashboard -->
+  <div id="main-dashboard" class="hidden">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="aec">AECOM</span> <span class="digital">Digital</span>
+        <div class="sidebar-sub">BIM Automation Solutions</div>
+      </div>
+      <nav>
+        <ul class="sidebar-list">
+          <!-- Ejemplo de un botón de la barra lateral -->
+          <li class="sidebar-item active" data-section="quienes">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Quiénes somos</div>
+              <div class="sidebar-card-desc">Automated Compliance</div>
+            </div>
+          </li>
+          <li class="sidebar-item" data-section="introduccion">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Introducción</div>
+              <div class="sidebar-card-desc">Data Management System</div>
+            </div>
+          </li>
+          <li class="sidebar-item" data-section="metodologia">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Metodología</div>
+              <div class="sidebar-card-desc">Drawing Standards QA</div>
+            </div>
+          </li>
+          <li class="sidebar-item" data-section="desarrollos">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Desarrollos</div>
+              <div class="sidebar-card-desc">Voids Coordination</div>
+            </div>
+          </li>
+          <li class="sidebar-item" data-section="casos">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Casos de estudio</div>
+              <div class="sidebar-card-desc">Smart Finishes Application</div>
+            </div>
+          </li>
+          <li class="sidebar-item" data-section="servicios">
+            <div class="sidebar-card">
+              <div class="sidebar-card-main">Nuestros servicios</div>
+              <div class="sidebar-card-desc">IoT Integration Platform</div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-buttons">
+        <button class="icon-btn" id="back-btn" title="Devolver"><i class="fa fa-arrow-left"></i></button>
+        <button class="icon-btn" id="home-btn" title="Inicio"><i class="fa fa-home"></i></button>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <h1>Data Analysis Dashboard</h1>
+        <p>Focused on infrastructure and digital consulting</p>
+      </header>
+
+      <!-- Secciones principales -->
+      <div class="section section-main" id="quienes">
+        <h2>Quiénes somos</h2>
+        <ul class="subtopics">
+          <li>Subtema 1: Historia y misión</li>
+          <li>Subtema 2: Equipo y valores</li>
+          <li>Subtema 3: Alcance global</li>
+        </ul>
+      </div>
+      <div class="section section-main hidden" id="introduccion">
+        <h2>Introducción</h2>
+        <ul class="subtopics">
+          <li>Subtema 1: Contexto del sector</li>
+          <li>Subtema 2: Retos actuales</li>
+          <li>Subtema 3: Oportunidades de mejora</li>
+        </ul>
+      </div>
+      <div class="section section-main hidden" id="metodologia">
+        <h2>Metodología</h2>
+        <ul class="subtopics">
+          <li>Subtema 1: Flujo de trabajo</li>
+          <li>Subtema 2: Herramientas utilizadas</li>
+          <li>Subtema 3: Mejores prácticas</li>
+        </ul>
+      </div>
+      <div class="section section-main hidden" id="desarrollos">
+        <h2>Desarrollos</h2>
+        <ul class="subtopics">
+          <li>Subtema 1: Proyectos recientes</li>
+          <li>Subtema 2: Innovaciones tecnológicas</li>
+          <li>Subtema 3: Resultados obtenidos</li>
+        </ul>
+      </div>
+      <div class="section section-main hidden" id="casos">
+        <h2>Casos de estudio</h2>
+        <ul class="subtopics">
+          <li>Subtema 1: Caso de éxito 1</li>
+          <li>Subtema 2: Caso de éxito 2</li>
+          <li>Subtema 3: Caso de éxito 3</li>
+        </ul>
+      </div>
+      <div class="section section-main hidden" id="servicios">
+        <h2>Nuestros servicios</h2>
+        <div class="cards">
+          <a href="Images/flujo.html" class="card">
+            <h3>Automation of Verification Processes</h3>
+            <ul>
+              <li>Quality control of models</li>
+              <li>Coordination tracking</li>
+              <li>Validation of standards and regulations</li>
+            </ul>
+          </a>
+          <a href="Images/metodologia.html" class="card">
+            <h3>Data Management and Visualization</h3>
+            <ul>
+              <li>Interactive dashboards</li>
+              <li>Team management and administration</li>
+              <li>Visualization of project KPIs in real time</li>
+            </ul>
+          </a>
+          <a href="Images/desarrollos.html" class="card">
+            <h3>Operational Efficiency Analysis</h3>
+            <ul>
+              <li>Productivity analysis by teams and areas</li>
+              <li>Data-based optimization of workflows</li>
+              <li>Resource performance evaluation</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+
+      <!-- Métricas -->
+      <div class="metrics" id="metrics-banner">
+        <h2>Tableros Digitales</h2>
+        <div class="metrics-row">
+          <div class="metric">
+            <i class="fa fa-chart-pie"></i>
+            <div class="metric-value" data-target="20" id="counter-dash">0</div>
+            <div class="metric-label">Tableros</div>
+          </div>
+          <div class="metric">
+            <i class="fa fa-lightbulb"></i>
+            <div class="metric-value" data-target="5" id="counter-sol">0</div>
+            <div class="metric-label">Digital soluciones</div>
+          </div>
+          <div class="metric">
+            <i class="fa fa-network-wired"></i>
+            <div class="metric-value" data-target="3" id="counter-centers">0</div>
+            <div class="metric-label">Global delivery centers</div>
+          </div>
+          <div class="metric">
+            <i class="fa fa-desktop"></i>
+            <div class="metric-value" data-target="500" id="counter-pract">0</div>
+            <div class="metric-label">Digital-enabled practitioners</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-left">
+          <span class="footer-part">Part of <b>AECOM</b></span>
+        </div>
+        <div class="footer-center">
+          &copy; AECOM 2025. All rights reserved.
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </main>
   </div>
   <script src="main.js"></script>
 </body>
